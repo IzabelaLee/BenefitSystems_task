@@ -1,33 +1,14 @@
-# Test Automation training from jaktestowac.pl
+# Automation Test for cart actions on  https://www.saucedemo.com 
+To run the tests, type 'npx playwright test' in the terminal in the 'task1_UI_test' directory. You should have Node.js installed.
 
-## Links
-- course https://jaktestowac.pl/course/playwright-wprowadzenie/
-- test site https://demo-bank.vercel.app/  
-if link is broken check https://jaktestowac.pl/lesson/pw1s01l01/
-- repository https://github.com/jaktestowac/playwright_automatyzacja_wprowadzenie
+To see the test results, type 'npx playwright show-report' in the terminal in the same location.
 
-## Commands
-- check `NodeJS` version  
-`node -v`
-- new project with Playwright  
-`npm init playwright@latest`
-- record tests for given site  
-`npx playwright codegen https://demo-bank.vercel.app/`
-- run tests without browser GUI  
-`npx playwright test`
-- run tests with browser GUI  
-`npx playwright test --headed`
-- view report  
-`npx playwright show-report`
+## Technology
+TypeScript with the Playwright framework was used to perform the task.
 
-## Playwright Config modifications
-- config file `playwright.config.ts`
-- disable browsers, i.e. Firefox  
-    ```javascript
-    // {
-    //   name: 'firefox',
-    //   use: {
-    //     ...devices['Desktop Firefox'],
-    //   },
-    // },
-    ```
+## Structure of the project
+The root directory of task 1 consists of subdirectories created by default in the playwright project. The code I wrote is located in the 'pages' and 'tests' directories. The files with the classes used for the tests and the test logic are placed there.
+
+## Comments
+I was not able to perform in the test "Remove products from the cart" step for checking whether a particular product disappeared from the list. While I know why this happens, at this point I have not come up with a better solution than to check whether the number of products in the list in the cart has decreased by 1.
+

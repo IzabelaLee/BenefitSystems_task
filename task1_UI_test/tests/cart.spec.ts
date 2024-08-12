@@ -53,7 +53,7 @@ test.describe('Cart actions', () => {
         await expect(cartPage.CartItemsSelector).toHaveCount(2);
     });
 
-    test('Remove products from cart', async ({ page }) => {
+    test('Remove products from the cart', async ({ page }) => {
         
         await productPage.addJacketToCart();
         await productPage.addRedTshirtToCart();
